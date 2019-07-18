@@ -7,9 +7,29 @@ main.addEventListener('click', function(event) {
   alert('I was clicked!');
 });
 
+
+
 // prints out keystrokes into console
 const input = document.querySelector('input');
  
 input.addEventListener('keydown', function(e) {
   console.log(e.key);
 });
+
+
+
+/// prevents default behavior of the input by keeping it from recieveing the letter 'g'
+const input = document.querySelector('input')
+ 
+input.addEventListener('keydown', function(e) {
+  if (e.key === "g") {
+    return e.preventDefault()
+  } else {
+    console.log(e.key)
+  }
+});
+
+
+
+
+/// bubbling 
